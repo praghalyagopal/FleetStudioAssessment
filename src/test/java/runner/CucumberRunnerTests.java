@@ -1,12 +1,8 @@
 package runner;
 
 import io.cucumber.junit.Cucumber;
-
 import io.cucumber.junit.CucumberOptions;
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
-
-import java.io.File;
 
 @RunWith(Cucumber.class)
 @CucumberOptions
@@ -14,10 +10,11 @@ import java.io.File;
                 features = {"src/test/resources/features/SignUp.feature"},
                 glue = {"stepDefinitions"},
                 monochrome = true,
-                plugin = {"pretty","html:target/cucumber.html"},
+                plugin = {"pretty", "html:target/cucumber-reports/Cucumber.html", "json:target/cucumber-reports/Cucumber.json", "junit:target/cucumber-reports/Cucumber.xml",
+                },
                 publish = true)
-public class CucumberRunnerTests{
+public class CucumberRunnerTests {
 
-    }
+}
 
 

@@ -9,7 +9,7 @@ public class BaseClass {
 
     public SignUpPage signUpPage = new SignUpPage(Helper.getDriver());
 
-    public  ThankYouPage thankYouPage = new ThankYouPage(Helper.getDriver());
+    public ThankYouPage thankYouPage = new ThankYouPage(Helper.getDriver());
 
     public LogInPage logInPage = new LogInPage(Helper.getDriver());
 

@@ -12,7 +12,8 @@ public class Helper {
     private static WebDriver driver;
     public final static int TIMEOUT = 10;
 
-    private Helper(){
+    private Helper() {
+        // setting Chrome drive property
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -21,22 +22,27 @@ public class Helper {
         driver.manage().window().maximize();
 
     }
+
     public static void openPage(String url) {
         driver.get(url);
     }
+
     public static WebDriver getDriver() {
         return driver;
     }
+
     public static void setUpDriver() {
-        if (Helper==null) {
+        if (Helper == null) {
             Helper = new Helper();
         }
     }
+
     public static String getTitle() {
         return driver.getTitle();
     }
+
     public static void tearDown() {
-        if(driver!=null) {
+        if (driver != null) {
             driver.close();
             driver.quit();
         }
